@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-form">
+      <h2>Welcome Back</h2>
+      <p>Login to continue your journey!</p>
+
+      <form id="loginForm" method="POST" class="form">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email address">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required placeholder="Enter your password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+
+        <div id="login-message" style="
+          margin-top: 10px; 
+          font-weight: bold; 
+          text-align: center; 
+          font-size: 16px;
+        "></div> <!-- Centered login message -->        
+
+        <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+        <p class="create-account">Don't have an account? <a href="signup.html">Sign up here</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+    
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const messageDiv = document.getElementById('login-message');
+    
+      try {
+        const response = await fetch('http://127.0.0.1:5000/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+    
+        const data = await response.json();
+        console.log('Server Response:', data);
+    
+        if (response.ok) {
+          messageDiv.style.color = 'green';
+          messageDiv.textContent = data.message || 'Login successful!';
+          
+          localStorage.setItem('email', data.email); // Save user email for later
+
+    
+          // Save user info to localStorage
+          const identity = email
+          localStorage.setItem('identity', identity);
+
+          // Redirect after short delay
+          setTimeout(() => {
+            window.location.href = 'logon.html'; // go to new logged-in homepage
+          }, 1000);
+    
+        } else {
+          messageDiv.style.color = 'red';
+          messageDiv.textContent = data.message || 'Login failed!';
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        messageDiv.style.color = 'red';
+        messageDiv.textContent = 'An error occurred';
+      }
+    });
+    </script>
+    
+
+</body>
+</html>

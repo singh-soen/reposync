@@ -1,0 +1,44 @@
+.container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  #searchInput {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 300px;
+    font-size: 1rem;
+  }
+  
+  .repo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .repo-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    color: var(--text-light);
+  }
+  
+  .repo-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .repo-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  

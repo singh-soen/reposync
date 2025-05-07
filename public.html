@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Public Repositories</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./public.css">
+  <script defer src="public.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo"><i class="fas fa-code-branch"></i> RepoSync</a>
+      <ul class="nav-links">
+        <li><a href="logon.html">Home</a></li>
+        <li><a href="list.html">My Repositories</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="header-section">
+      <h1>Explore Repositories</h1>
+      <input type="text" id="searchInput" placeholder="Search repositories or users...">
+    </section>
+
+    <div id="publicRepoList" class="repo-list">
+      <!-- Public repositories will be injected here -->
+    </div>
+  </main>
+</body>
+</html>

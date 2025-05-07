@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Repositories</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./logon.css">
+  <link rel="stylesheet" href="./list.css">
+  <script defer src="list.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo"><i class="fas fa-code-branch"></i> RepoSync</a>
+      <ul class="nav-links">
+        <li><a href="logon.html">Home</a></li>
+        <li><a href="public.html" class="active">Dive Public</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="header-section">
+      <h1>Repositories</h1>
+      <button id="createRepoBtn" class="btn-create">+ Create New</button>
+    </section>
+
+    <div id="repoList" class="repo-list">
+      <!-- Repositories will be listed here -->
+    </div>
+  </main>
+
+</body>
+</html>

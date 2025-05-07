@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile</title>
+  <link rel="stylesheet" href="./profile.css">
+</head>
+<body>
+
+  <div class="profile-container">
+    <div class="profile-card">
+      <h2>Your Profile</h2>
+      <p id="email-display"></p>
+
+      <hr>
+
+      <h3>Change Password</h3>
+      <form id="changePasswordForm" class="form">
+        <div class="form-group">
+          <label for="newPassword">New Password</label>
+          <input type="password" id="newPassword" required placeholder="Enter new password">
+        </div>
+
+        <div class="form-group">
+          <label for="confirmNewPassword">Confirm New Password</label>
+          <input type="password" id="confirmNewPassword" required placeholder="Confirm new password">
+        </div>
+
+        <button type="submit" class="btn">Update Password</button>
+      </form>
+
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+
+<script>
+  // Load email from localStorage
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (user && user.email) {
+    document.getElementById('email-display').textContent = user.email;
+  }
+
+  // Handle password change
+  document.getElementById('changePasswordForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const newPassword = document.getElementById('newPassword').value.trim();
+    const confirmNewPassword = document.getElementById('confirmNewPassword').value.trim();
+    const messageDiv = document.getElementById('message');
+
+    if (newPassword !== confirmNewPassword) {
+      messageDiv.style.color = 'red';
+      messageDiv.textContent = "Passwords don't match.";
+      return;
+    }
+
+    try {
+      const response = await fetch('http://127.0.0.1:5000/change-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: user.email, new_password: newPassword })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        messageDiv.style.color = 'green';
+        messageDiv.textContent = data.message || "Password updated successfully!";
+      } else {
+        messageDiv.style.color = 'red';
+        messageDiv.textContent = data.message || "Password update failed.";
+      }
+
+    } catch (error) {
+      console.error('Error:', error);
+      messageDiv.style.color = 'red';
+      messageDiv.textContent = "Something went wrong.";
+    }
+  });
+</script>
+
+</body>
+</html>

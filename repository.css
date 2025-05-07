@@ -1,0 +1,123 @@
+:root {
+    --primary: #58a6ff;
+    --secondary: #238636;
+    --dark-bg: #0d1117;
+    --card-bg: #161b22;
+    --text-light: #c9d1d9;
+    --accent: #2ea043;
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .repository-container {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  h1 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+  }
+  
+  .input-repo-name {
+    margin-left: 25%;
+    width: 50%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .input-repo-name:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+  }
+  
+  .editors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .editor {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .editor h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--accent);
+  }
+  
+  textarea {
+    flex: 1;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--text-light);
+    font-size: 1rem;
+    resize: vertical;
+    transition: var(--transition);
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  button {
+    padding: 0.8rem 2rem;
+    background-color: var(--secondary);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(46, 160, 67, 0.2);
+  }
+  

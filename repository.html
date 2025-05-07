@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Repository Editor</title>
+  <link rel="stylesheet" href="repository.css">
+</head>
+<body>
+
+  <div class="repository-container">
+    <h1>Create New Repository</h1>
+
+    <input id="repo-name" type="text" placeholder="Enter Repository Name" class="input-repo-name">
+
+    <div class="editors">
+      <div class="editor">
+        <h2>HTML</h2>
+        <textarea id="html-editor" placeholder="Write HTML code here..."></textarea>
+      </div>
+      <div class="editor">
+        <h2>CSS</h2>
+        <textarea id="css-editor" placeholder="Write CSS code here..."></textarea>
+      </div>
+      <div class="editor">
+        <h2>JavaScript</h2>
+        <textarea id="js-editor" placeholder="Write JavaScript code here..."></textarea>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="saveCode()">Save Code</button>
+      <button onclick="runCode()">Run Code</button>
+    </div>
+  </div>
+
+  <script src="repository.js"></script>
+</body>
+</html>

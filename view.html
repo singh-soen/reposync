@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Repository</title>
+  <link rel="stylesheet" href="repository.css">
+</head>
+<body>
+
+  <div class="repository-container">
+    <h1 id="heading">Viewing: Repository Name</h1>
+
+    <div class="editors">
+      <div class="editor">
+        <h2>HTML</h2>
+        <textarea id="html-editor" readonly></textarea>
+      </div>
+      <div class="editor">
+        <h2>CSS</h2>
+        <textarea id="css-editor" readonly></textarea>
+      </div>
+      <div class="editor">
+        <h2>JavaScript</h2>
+        <textarea id="js-editor" readonly></textarea>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="runCode()">Run Code</button>
+    </div>
+  </div>
+
+  
+
+  <script>
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+    }
+  </script>
+
+  <script src="./view.js"></script>
+</body>
+</html>

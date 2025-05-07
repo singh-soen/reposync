@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RepoSync - Collaborative Coding Platform</title>
+  <meta name="description" content="Collaborative platform to share, improve, and build projects together">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <i class="fas fa-code-branch"></i>
+        <span>RepoSync</span>
+      </a>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login.html" class="btn btn-primary login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 data-aos="fade-up">Collaborate on Code Like Never Before</h1>
+      <p data-aos="fade-up" data-aos-delay="100">RepoSync brings developers together to build, share, and improve projects in real-time.</p>
+      <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+        <a href="./signup.html" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> Get Started
+        </a>
+        <a href="#features" class="btn btn-secondary">
+          <i class="fas fa-search"></i> Learn More
+        </a>
+      </div>
+    </div>
+    
+    <!-- Background circles -->
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Powerful Features</h2>
+      <p class="section-description" data-aos="fade-up">Everything you need to collaborate effectively on code projects</p>
+      
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Real-time Collaboration</h3>
+          <p>Work simultaneously with your team members with live updates and changes visible to everyone instantly.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">
+            <i class="fas fa-history"></i>
+          </div>
+          <h3>Version Control</h3>
+          <p>Track every change with our built-in version control system. Never lose work and easily revert changes.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Code Review</h3>
+          <p>Leave comments, suggest changes, and discuss improvements directly on the code with your team.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3>Project Management</h3>
+          <p>Organize tasks, track progress, and manage your project all in one place with our integrated tools.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Security</h3>
+          <p>Enterprise-grade security with end-to-end encryption and permission controls for your projects.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="feature-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3>Integrations</h3>
+          <p>Connect with your favorite tools like Slack, GitHub, and Jira for seamless workflow integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+      <p class="section-description" data-aos="fade-up">See what our community is building with RepoSync</p>
+      
+      <div class="projects-container">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+          <div class="project-info">
+            <h3>Open Source CMS</h3>
+            <p>A modern content management system built with Hyper Text Markup Language in addition with cascading style sheets and javascript</p>
+            <div class="project-meta">
+              <span><i class="fas fa-star"></i> 1.2k</span>
+              <span><i class="fas fa-code-branch"></i> 45 forks</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80');"></div>
+          <div class="project-info">
+            <h3>Attractive Websites</h3>
+            <p>Generate stunning artwork using HTML CSS JS in addition with their live preview</p>
+            <div class="project-meta">
+              <span><i class="fas fa-star"></i> 3.4k</span>
+              <span><i class="fas fa-code-branch"></i> 128 forks</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+          <div class="project-info">
+            <h3>Online Web Game Engine</h3>
+            <p>A lightweight game engine for building 2D mobile and web based games</p>
+            <div class="project-meta">
+              <span><i class="fas fa-star"></i> 892</span>
+              <span><i class="fas fa-code-branch"></i> 67 forks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">What Our Users Say</h2>
+      <p class="section-description" data-aos="fade-up">Join thousands of developers who collaborate better with RepoSync</p>
+      
+      <div class="testimonials-container">
+        <div class="testimonial" data-aos="fade-up">
+          <div class="testimonial-content">
+            "RepoSync has completely transformed how our team works together. The real-time collaboration features saved us countless hours of merge conflicts and communication overhead."
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="author-avatar">
+            <div>
+              <h4>Sarah Johnson</h4>
+              <p>Lead Developer, TechCorp</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-content">
+            "As an open-source maintainer, RepoSync's code review tools have made it so much easier to manage contributions from the community. The inline commenting is brilliant!"
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="author-avatar">
+            <div>
+              <h4>Michael Chen</h4>
+              <p>Open Source Maintainer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+      <p class="section-description" data-aos="fade-up">Have questions or want to learn more? We'd love to hear from you.</p>
+      
+      <div class="contact-container">
+        <div class="contact-info" data-aos="fade-up">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>soensingh444@gmail.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Visit Us</h3>
+              <p>146, St.no.3, SBDS Nagar, Dhandra road, Dugri, Ludhiana, 141013</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+91 9501427986</p>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form" data-aos="fade-up" data-aos-delay="100">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-control" placeholder="Your message" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/soensingh"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/soen-singh-723bb1356/"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      
+      <p class="copyright">© 2025 RepoSync. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
